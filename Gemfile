@@ -1,5 +1,5 @@
-source 'https://code.stripe.com'
-source 'https://rubygems.org'
+#source 'https://code.stripe.com'
+source 'http://ruby.taobao.org'
 
 def darwin_only(require_as)
   RbConfig::CONFIG['host_os'] =~ /darwin/ && require_as
@@ -9,7 +9,7 @@ def linux_only(require_as)
   RbConfig::CONFIG['host_os'] =~ /linux/ && require_as
 end
 
-ruby "2.0.0"
+ruby "2.1.0"
 
 gem 'rails', '4.0.2'
 gem 'sinatra', '>= 1.3.0', require: nil
@@ -51,8 +51,8 @@ gem 'rack-cache'
 gem 'multi_fetch_fragments', github: 'robotmay/multi_fetch_fragments'
 
 # services
-gem 'puma', '2.6.0'
-gem 'sidekiq', '2.15.2'
+gem 'puma'
+gem 'sidekiq'
 gem 'sidekiq-limit_fetch'
 gem 'airbrake'
 gem 'newrelic_rpm'
@@ -65,7 +65,7 @@ gem 'keen'
 gem 'coveralls', require: false
 
 # auth
-gem 'devise', '3.0.0.rc'
+gem 'devise'
 gem 'devise_invitable', git: 'git://github.com/robotmay/devise_invitable.git', branch: 'rails4'
 gem 'devise-async'
 gem 'cancan'
@@ -80,22 +80,22 @@ gem 'mini_exiftool_vendored'
 gem 's3_direct_upload'
 
 # views
-gem 'slim', '>= 1.3.0'
-gem 'simple_form', '~> 3.0.0.beta1'
+gem 'slim'
+gem 'simple_form'
 gem 'link_to_active_state'
 gem 'kaminari'
 gem 'redcarpet'
 
 # models
-gem 'friendly_id', '5.0.0.rc1'
-gem 'closure_tree', github: 'mceachen/closure_tree', branch: 'wip_rails4'
+gem 'friendly_id'
+gem 'closure_tree', github: 'mceachen/closure_tree'
 
 # assets
 group :assets do
-  gem 'sass-rails',   '~> 4.0.0.beta1'
-  gem 'coffee-rails', '~> 4.0.0.beta1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'zurb-foundation', '~> 4.1.6'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+  gem 'zurb-foundation'
 end
 
 gem 'jquery-rails'
